@@ -1,0 +1,297 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)), url(../assets/backgroundSetup.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+     position: relative;     
+     overflow-x: hidden;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    height: 100vh;    
+}
+
+#header{
+    width: 100%;
+    height: 10vh;
+}
+
+#logo{
+    position: fixed;
+    z-index: 1000;
+    left: 3%;
+    top: 3%;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 23px;
+    color: white;
+}
+
+#menu{
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-family: sans-serif;
+    
+}
+
+#nav li, a{
+    list-style: none;
+    text-decoration: none;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    font-size: 15px;
+}
+
+#menu > li a:hover{
+    transition: .5s;
+    border-bottom: 1px solid orangered;
+} 
+
+#redes{
+    position: absolute;
+    left: 95%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#redes i{
+    color: #8c8c8c;
+    font-size: 30px;
+}
+
+#redes i:hover{
+    transition: .5s;
+    color: #F44926;
+}
+
+ .apresentation{
+    font-family: sans-serif;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    width: 80%;
+    text-align: center;
+    font-size: 30px;
+} 
+
+.apresentation h2{
+    color: #8c8c8c;
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+#menu li a{
+    position: relative;
+    overflow: hidden;
+}
+
+main{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.retangulo{
+    position: absolute;
+    top: -30%;
+    left: -300px;
+    width: 100px;
+    height: 100px;
+}
+
+#sobre{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+#sobre img{
+    width: 50vw;
+}
+
+.minhas-informacoes{
+    margin: 0 auto;
+    width: 53%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #cfcdcd;
+    text-align: center;
+}
+
+@keyframes infor1 {
+    0%{
+        left: 50%;
+    }
+
+    50%, 100%{
+        left: 33%;
+    }
+} 
+@keyframes infor2 {
+    0%{
+        left: 33%;
+    }
+
+    50%, 100%{
+        left: 50%;
+    }
+} 
+#sobre span:nth-last-child(1){
+    position: absolute;
+    display: block;
+    width: 20%;
+    left: 50%;
+    overflow: hidden;
+    height: 2px;
+    background: #F44926;
+    animation: infor1 2s linear infinite; 
+    animation-direction: alternate-reverse;
+    
+}
+
+#sobre span:nth-last-child(2){
+    position: absolute;
+    display: block;
+    width: 20%;
+    height: 2px;
+    background: #F44926;
+    animation: infor2 2s linear infinite; 
+    animation-direction: alternate-reverse;
+}
+
+
+#projetos{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    color: white;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 30px;   
+}
+
+#projetos > hr{
+    margin: 0 auto;
+    text-align: center;
+    width: 50%;
+    height: 2px;
+    border: none;
+    background-color: #F44926;
+}
+#colecao{
+    width: 200%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .7s;
+}
+
+
+.pag1, .pag2{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template: auto auto / auto auto auto;
+    justify-items: center;
+    align-items: center;
+}
+
+.square{
+    width: 80%;
+    height: 80%;
+    background-color: #F44926;
+    transition: .7s;
+    opacity: .7;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.square:hover{
+    opacity: 1;
+    transition: .7s;
+    transform: scale(1.2, 1.2);
+}
+
+#projetos button{
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 17px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#projetos button:hover{
+    color: #F44926;
+}
+
+#projetos > img{
+    bottom: -33%;
+    position: absolute;
+    transform: rotate(90deg);
+}
+
+#meta{
+    width: 100%;
+    height: 100vh;
+    background-color: transparent;
+}
+
+#habilidades{
+    width: 100%;
+    background: black;
+    color: white;
+}
+
+#habilidades > h1{
+    padding: 80px;
+    font-size: 40px;
+    font-family: sans-serif;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.grid-habilidades{
+    margin: auto;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.grid-habilidades > div{
+    width: 310px;
+    height: 100px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 80px;
+    display: flex;
+    overflow: hidden;
+}
+.grid-habilidades div > p{
+    text-align: left;
+    font-size: 13px;
+    color: #8c8c8c;
+    font-family: sans-serif;
+}
