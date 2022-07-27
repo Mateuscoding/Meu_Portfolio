@@ -20,6 +20,32 @@
             }
 
 
+let squares = document.querySelectorAll('.square')
+
+squares.forEach(
+    (square)=>{
+        square.addEventListener('mouseenter',(elemento)=>{
+            let info = elemento.target.children[1]
+            let btn = elemento.target.children[2]
+
+            info.style.display = 'flex'
+            btn.style.display = 'flex'
+            console.log('funcionando')
+        })
+
+        square.addEventListener('mouseleave',(elemento)=>{
+            
+            let info = elemento.target.children[1]
+            let btn = elemento.target.children[2]
+
+            info.style.display = 'none'
+            btn.style.display = 'none'
+            console.log(info)
+        })
+})
+
+
+
 
 // let pag1 = document.querySelector('#pag')
 // let pag2 = document.querySelector('#pag2')
