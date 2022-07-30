@@ -8,13 +8,17 @@
                 if(button.id == 'pagina1'){
                     colecao.style.margin = '0px'
                     pagina1.style.color = '#F44926'
+                    pagina1.style.display = 'none'
                     pagina2.style.color = 'white'
-                    // pagina2.style.display = 'none'
+                    pagina2.style.display = 'flex'
 
                 }else{
                     colecao.style.marginLeft = '-100%'
                     pagina2.style.color = '#F44926'
+                    pagina2.style.display = 'none'
                     pagina1.style.color = 'white'
+                    pagina1.style.display = 'block'
+
 
                 }
             }
@@ -25,22 +29,28 @@ let squares = document.querySelectorAll('.square')
 squares.forEach(
     (square)=>{
         square.addEventListener('mouseenter',(elemento)=>{
-            let info = elemento.target.children[1]
-            let btn = elemento.target.children[2]
+            let projeto = elemento.target.children[0]
+            let projetoDescricao = elemento.target.children[1]   
 
-            info.style.display = 'flex'
-            btn.style.display = 'flex'
-            console.log('funcionando')
+            projeto.classList.toggle('flip')
+            projetoDescricao.classList.toggle('flip')
+
+            console.log('foi')
+           
+
+
+
+            // document.getElementById('2').style.rotate
+            
+         
         })
 
         square.addEventListener('mouseleave',(elemento)=>{
-            
-            let info = elemento.target.children[1]
-            let btn = elemento.target.children[2]
+            let projeto = elemento.target.children[0]
+            let projetoDescricao = elemento.target.children[1]   
 
-            info.style.display = 'none'
-            btn.style.display = 'none'
-            console.log(info)
+            projeto.classList.toggle('flip')
+            projetoDescricao.classList.toggle('flip')
         })
 })
 

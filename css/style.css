@@ -205,7 +205,6 @@ main{
 
 #projetos{
     width: 100%;
-    /* height: 100vh; */
     position: relative;
     color: white;
     text-align: center;
@@ -215,7 +214,7 @@ main{
 }
 
 #projetos > hr{
-    margin: 0 auto;
+    margin: 30px auto;
     text-align: center;
     width: 50%;
     height: 2px;
@@ -235,7 +234,7 @@ main{
 
 #pag1, #pag2{
     width: 100%;
-    /* height: 100%; */
+    height: 100%;
     display: flex;
     flex-wrap: wrap;
     /* grid-template: auto auto / auto auto auto; */
@@ -248,76 +247,75 @@ main{
 .square{
     position: relative;
     width: 400px;
-    height: 100%;
+    height: 250px;
     transition: .7s;
     opacity: .7;
     cursor: pointer;
     z-index: 1;
     color:#F44926;
+    transform-style: preserve-3d;
+    /* background-color: #26f4ce; */
 }
 
-.square p{
+.flip{
+    transform: rotateY(180deg)
+}
+
+.projeto{
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    transition: 1s;
-    padding: 10px;
-    width: 95%;
-    margin: 3px auto;
-    text-align: center;
-    font-size: 14px;
-    background-color: black;
-    color: white;
-}
-
-.square a{
-    position: absolute;
-    left: 50%;
-    top: 80%;
-    transform: translate(-50%, -50%);
-    padding: 10px;
-    border-radius: 5px;
-    background-color: #F44926;
-    border: none;
-    cursor: pointer;
-    transition: .5s;
-    font-weight: bold;
-}
-.square a:hover{
-    transition: .5s;
-    padding: 12px
-}
-
-.explorar{
-    font-weight: bold;
-    color: white;
-    cursor: pointer;
-    border: none;
-    background-color: transparent;
-}
-.square:hover{
-    z-index: 10000;
-    opacity: 1;
+    width: 100%;
+    height: 100%;   
+    z-index: 1;
     transition: .7s;
-    transform: scale(1.1, 1.1);
-    /* background-color: #F44926; */
-
+background-color: #cfcdcd;
+    backface-visibility: hidden;
 }
 
+.projeto-descricao{
+    /* padding: 15px; */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    /* transform: rotateY(180deg); */
+    backface-visibility: hidden;
+    transition: .7s;
+    font-size: 15px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.projeto-descricao p{
+    width: 90%;
+}
 
-
-#projetos button{
-    border: none;
+.projeto-descricao a > button{
     background-color: transparent;
     color: white;
-    font-size: 17px;
-    font-weight: 700;
+    /* padding: 15px; */
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 30px;
+}
+.projeto-descricao a > button:hover{
+    /* background-color: aliceblue; */
+}
+
+#pagina1, #pagina2{
+    margin: 0 auto;
+    background-color: transparent;
+    border: none;
+    color: #F44926;
+    font-size: 25px;
     cursor: pointer;
 }
 
-#projetos button:hover{
-    color: #F44926;
+
+#pagina1{
+    display: none;
 }
 
 #meta{
@@ -427,19 +425,7 @@ main{
     }
 
 
-    /* #header > button{
-        position: absolute;
-        width: 100px;
-        height: 60px;
-        top: 100%;
-        left: 50%;
-        transform: translate(-50%);
-        border-radius: 10% 10% 80% 80%;
-        font-size: 50px;
-        background-color: white;
-        /* border: 1px solid white; */
-         color: #F44926;
-    } */
+   
 
 
     .apresentation{
