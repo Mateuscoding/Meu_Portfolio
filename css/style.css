@@ -7,7 +7,7 @@ body{
     width: 100%;
     height: 100%;
     background: linear-gradient(rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0.5)), url(../assets/backgroundSetup.png);
+    rgba(0, 0, 0, 0.5)), url(../assets/back.png);
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
