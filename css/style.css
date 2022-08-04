@@ -300,9 +300,6 @@ background-color: #cfcdcd;
     cursor: pointer;
     font-size: 30px;
 }
-.projeto-descricao a > button:hover{
-    /* background-color: aliceblue; */
-}
 
 #pagina1, #pagina2{
     margin: 0 auto;
